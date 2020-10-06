@@ -20,23 +20,13 @@
 	<link rel="stylesheet" href="/css/common.css">
 		<link rel="stylesheet" href="/css/main.css">
 		
-	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/ui.dw.js"></script>
-	{{-- <script src="/js/jquery.cookie.js"></script> --}}
-	{{-- <script src="/js/common.js"></script> --}}
-    {{-- <script src="/js/app.js"></script> --}}
     <script src="/js/copy.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script src="/js/gsap.js"></script>
+    <script src="/js/scrollmagic.js"></script>
 	<script>
-	var dwCtx = "";
-	var langcd = "kr";
-	var lnkUrl = dwCtx + "/" + langcd;
-	var filter = "win16|win32|win64|mac|macintel";
-	console.log(navigator.platform.toLowerCase());
-	if ( navigator.platform ) { 
-		if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) { 
-			document.location.href="https://m.daewoong.co.kr/";
-		}
-	}
 	</script>
 	
 </head>
@@ -141,11 +131,6 @@
 				</span>
 			</div>
 			<!-- // R&D -->
-
-			<!-- Global Network // -->
-			<div class="global-network">
-			</div>
-			<!-- // Global Network -->
 		</div>
 		<!-- // contents -->
 	</div>
