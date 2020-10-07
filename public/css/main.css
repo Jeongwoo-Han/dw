@@ -254,7 +254,7 @@ html:not(.ie) .rnd .swiper-button-next:focus .ir { outline:-webkit-focus-ring-co
 @keyframes ani-prevbtn-2-out{ 0%{border-color:#ff5a2b;background-color:#ff5a2b;} 100%{background-color:transparent;} }
 @keyframes ani-nextbtn-2-out{ 0%{border-color:#ff5a2b;background-color:#ff5a2b;} 100%{background-color:transparent;} }
 @keyframes ani-prev-2-out{ 0%{left:50%;border-color:#fff;} 100%{left:50%;} }
-@keyframes ani-next-2-out{ 0%{right:50%;border-color:#fff;} {right:50%;} }
+@keyframes ani-next-2-out{ 0%{right:50%;border-color:#fff;} 100%{right:50%;} }
 
 @keyframes ani-prevbtn-3-out{ 0%{background-color:#ff5a2b;} 100%{background-color:transparent;} }
 @keyframes ani-nextbtn-3-out{ 0%{background-color:#ff5a2b;} 100%{background-color:transparent;} }

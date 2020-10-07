@@ -23,9 +23,8 @@
 	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/ui.dw.js"></script>
     <script src="/js/copy.js"></script>
-    <script src="/js/swiper.js"></script>
-    <script src="/js/gsap.js"></script>
-    <script src="/js/scrollmagic.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/gsap.min.js"></script>
 	<script>
 	</script>
 	
