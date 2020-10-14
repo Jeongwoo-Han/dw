@@ -1,14 +1,6 @@
-;(function(root) { // 글로벌 함수 선언
+(function(root) { // 글로벌 함수 선언
 
     'use strict';
-
-    root.detectMobile = root.detectMobile || function() {
-        var check = false;
-        (function (a) {
-            if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
-        })(navigator.userAgent || navigator.vendor || window.opera);
-        return check;
-    }
 
     root.extend = root.extend || function(_source, _props) { // object 병합
         var _key;
@@ -97,20 +89,14 @@
 // hasn't been nested in a jQuery plugin. Instead, we just use
 // jQuery for its instantiation.
 
-;(function($, window, document, undefined) {
+// 분석 필요
+(function($, window, document, undefined) {
 
     'use strict';
-
-    var isMobile = isMobile || detectMobile();
-
-    var root = (function(g) { // global 셋업
-        return g;
-    })(this);
 
     var BaseInView = function(elements, options) { // plugin constructor 생성
 
         var base = { // base 선언
-            appId: '',
             $el: (typeof elements == 'string') ? $(elements) : elements,
             length: 0,
             scope: [],
@@ -122,13 +108,8 @@
 
         if (!base.$el.length) return false;
 
-        base.appId = setUniqueId(base.$el.attr('id')) + random(); // set unit app id
-
-        var $document = $(document), // dom 캐쉬
-            $window = $(window),
-            $html = $('html'),
-            $body = $('body'),
-            __this = this;
+        var $window = $(window),
+            $html = $('html');
 
         var metadata = base.$el.attr('data-plugin-options'); // option 에 취합하기 위한 metadata 생성, // <body id="app" data-plugin-options='{ "foo": "123" }'>
         metadata = (metadata !== undefined) ? $.parseJSON(metadata) : {};
@@ -142,8 +123,8 @@
             onInit: noop,
             onResize: noop,
             onScroll: noop,
-            thresholdTop: (isMobile === true) ? 0 : 0.15, // 지연 임계치, %로 환산, 모바일일때 0
-            thresholdBottom: (isMobile === true) ? 0 : 0.15,
+            thresholdTop: 0.15, // 지연 임계치, %로 환산, 모바일일때 0
+            thresholdBottom: 0.15,
             once: false, // 한번만 실행 (removeClass 안함, PC, 모바일 모두)
             onceAtMobile: true, // 모바일에서 한번만 실행 (removeClass 안함)
             throttleScrollDelay: 100
@@ -173,8 +154,8 @@
                     return _result;
                 };
                 base.window.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight || $window.height();
-                base.window.thresholdTop = _getPercent(base.window.height, (isMobile === true) ? 0 : opts.thresholdTop); // 임계치, 모바일일때 0
-                base.window.thresholdBottom = _getPercent(base.window.height, (isMobile === true) ? 0 : opts.thresholdBottom);
+                base.window.thresholdTop = _getPercent(base.window.height, opts.thresholdTop); // 임계치, 모바일일때 0
+                base.window.thresholdBottom = _getPercent(base.window.height, opts.thresholdBottom);
             },
             getScope: function(){
                 base.scope = [];
@@ -357,11 +338,7 @@
                         for (var j = 0; j < base.invisibleIdx.length; j++) {
                             var $invisible = base.$el.eq(base.invisibleIdx[j]);
 
-                            if (isMobile === true) { // 모바일일때
-                                if (opts.once !== true && opts.onceAtMobile !== true) { // 한번만 실행이 아니면
-                                    _removeClass($invisible);
-                                }
-                            } else if (opts.once !== true) { // 모바일이 아닐때
+                            if (opts.once !== true) { // 모바일이 아닐때
                                 _removeClass($invisible);
                             }
 
@@ -475,14 +452,13 @@
 })(jQuery, window, document);
 
 
-// Timeline JS
+// 타임라인
 $(function() {
 
     'use strict';
 
     var $window = window.$window || $(window),
-        $document = window.$document || $(document),
-        $html = window.$html || $('html');
+        $document = window.$document || $(document);
 
     $.fn.timeline = function(_options) {
 
@@ -506,6 +482,7 @@ $(function() {
 
             base.length = base.items.length;
 
+            // Scope 값 지정
             var _reset = function(){
                 base.scope = [];
                 base.windowHeight = $window.height();
@@ -525,6 +502,7 @@ $(function() {
                 $historyTabItems.removeClass('in').eq(base.activeGroup).addClass('in');
             };
 
+            // 타임라인 Fixed 변경 및 히스토리 섹션 opacity 애니메이션, 네비게이션 바 게이지 구현
             var _core = function(){
                 base.activeEl = null;
                 base.scrollTop = $window.scrollTop();
@@ -544,13 +522,12 @@ $(function() {
                 base.activeEl = base.items.eq(base.active);
                 base.items.removeClass('active');
                 base.activeEl.addClass('active');
-                // console.info(base);
                 _historyTab();
 
-                if (base.scrollTop >= 1000) {
-                    $html.addClass('is-history');
+                if (base.scrollTop >= 0) {
+                    $(".section-history-nav").addClass('is-history');
                 } else {
-                    $html.removeClass('is-history');
+                    $(".section-history-nav").removeClass('is-history');
                 }
 
                 var _scrollTop = $window.scrollTop(),
@@ -575,6 +552,8 @@ $(function() {
             });
             _core();
 
+
+            // 앵커 위치 조정 및 클릭 시 앵커
             var historyPos = [];
             $('#historySticky a').each(function() {
                 let _that = $(this);
@@ -584,7 +563,6 @@ $(function() {
                 }
                 _pos.target = $(_pos.targetId);
                 _pos.targetMg = _pos.target.css('marginTop').replace('px', '');
-                // _pos.targetPos = _pos.target.offset().top - _pos.targetMg - 300;
                 _pos.targetPos = _pos.target.offset().top - 350;
 
                 historyPos.push( _pos );
@@ -594,24 +572,19 @@ $(function() {
                 e.preventDefault();
                 var $this = $(e.target);
                 $this = ($this.is('a')) ? $this : $this.closest('a');
-                var $target = $($this.attr('href'));
 
                 var _detail = '';
-                historyPos.forEach(function(pos, idx) {
+                historyPos.forEach(function(pos) {
                     if ( pos.targetId === $this.attr('href') ) {
                         _detail = pos;
                     }
                 });
 
-                // var _marginTop = 130+78; // 보강 필요
-                // var _marginTop = 260; // 보강 필요
-                // var _to = $target.offset().top - _marginTop;
                 var _to = _detail.targetPos;
-                // console.log(_to);
 
                 $('html, body').stop().animate({
                     'scrollTop': _to
-                }, 80);
+                }, 300);
             });
 
         });
@@ -622,4 +595,3 @@ $(function() {
     $('#timeline').timeline();
 
 });
-
