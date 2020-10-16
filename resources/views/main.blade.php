@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html lang="ko">
     <head>
@@ -19,248 +18,162 @@
         <meta name="copyright" content="삼진제약" />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
-        <meta name="theme-color" content="#000" />
         <title id="title">삼진제약</title>
         
         <script src="/js/webfont.js"></script>
+        <link rel="stylesheet" href="/css/base.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500&amp;subset=korean" />
         
         <script src="/js/jquery-3.3.1.min.js"></script>
         <script src="/js/module-dist.js"></script>
+        <script src="/js/main.js"></script>
+
     </head>
-    <body>
-
-        <div id="historySticky" class="container section-history-nav" style="margin-bottom:-120px;"><!-- section-history-nav -->
-            <div class="wrap">
-                <ul class="tab">
-                    <li class="in"><a href="#year2011"><span>2020 - 2011</span></a></li>
-                    <li><a href="#year2001"><span>2010 - 2001</span></a></li>
-                    <li><a href="#year1997"><span>2000 - 1997</span></a></li>
-                </ul>
-                <div class="bar"><div></div></div>
-            </div>
-        </div><!-- // section-history-nav -->
-
-        <div id="timeline">
-
-            <div id="year2011" class="container section-history js-inview-container" data-group-idx="0" style="margin-top:180px;"><!-- section-history -->
-                <div class="wrap">
-                    <div class="summary">
-                        <div class="pic">
-                            <img src="/images/history_header_2020.jpg" alt="" />
-                        </div>
-                        <p class="desc">
-                            2020 - 2011
-                        </p>
-                    </div>
-                    <div class="pos-relative">
-                        <div class="year">
-                            <div class="module">
-                                <p class="start">2020</p>
-                                <p class="end">2011</p>
+    <body class="page-lab">
+        
+        <div id="container"><!-- container -->
+            
+            
+            <div id="header"><!-- header : 투명 배경일때 is-transparent -->
+        
+            </div><!-- // header -->
+        
+        
+            <div id="wrapper"><!-- wrapper -->
+                <div id="inner"><!-- inner -->
+                    <!-- content -->
+                    <div id="content" class="content"><!-- content -->
+        
+                        <div class="container submain-a no-translate js-inview-container">
+                            <div class="wrap is-full">
+                                <div class="background">
+                                    <div class="sizer"></div>
+                                    <div class="pic" style="background-image: url('/images/banner_laboratory_about.jpg')"></div>
+                                </div>
+                                <div class="holder">
+                                    <div class="inner">
+                                        <div class="grid grid-a">
+                                            <div class="col hero">
+                                                <div class="table">
+                                                    <div class="module">
+        
+                                                        <h1 class="title doc-title">
+                                                            <strong>
+                                                                <span class="js-lettering">연구소 소개</span>
+                                                            </strong>
+                                                        </h1>
+                                                        <p class="desc eng">
+                                                            <span>R&D</span>
+                                                            <span>Introduction</span>
+                                                        </p>
+        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col list">
+                                                <div id="breadcrumb" class="breadcrumb">
+                                                    <ul class="tab">
+                                                        <li><a href="javascript:;"><i class="icon home"><em>Home</em></i></a></li>
+                                                        <li><a href="javascript:;"><span>연구개발</span></a></li>
+                                                        <li><strong>연구소 소개</strong></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="lists">
-                            <ul class="reset">
-                                <li>
-                                    <p class="month">2020</p>
-                                    IBK기업은행 우량 수출입 기업인 베스트 파트너 지정<br>
-                                    ECRC 우수 기업연구소 지정
-                                </li>
-                                <li>
-                                    <p class="month">2019</p>
-                                    중국 법인 안휘성 법인 설립<br>
-                                    <img src="/images/history_2019.jpg" alt="2019연혁 이미지"><br>
-                                    <span>NR G&C 중국 법인 안휘성</span>
-                                </li>
-                                <li>
-                                    <p class="month">2018</p>
-                                    2018 풍세산업단지 설립<br>
-                                    <img src="/images/history_2018.jpg" alt="2018연혁 이미지"><br>
-                                    <span>NR G&C 풍세산업단지</span>
-                                </li>
-                                <li>
-                                    <p class="month">2017</p>
-                                    2017 시화 MTV(Multi Techno Valley) 이전<br>
-                                    <img src="/images/history_2017.jpg" alt="2017연혁 이미지"><br>
-                                    <span>NR G&C 시화본사</span>
-                                </li>
-                                <li>
-                                    <p class="month">2016</p>
-                                    시화 MTV(Multi Techno Valley) 입주 예정<br>
-                                    ‘제50회 납세자의 날’ 동탄산업훈장 수여<br>
-                                    삼성전기㈜ 품질 혁신상 수상
-                                </li>
-                                <li>
-                                    <p class="month">2015</p>
-                                    벤처기업 인증<br>
-                                    부품·소재 전문기업 인증<br>
-                                    뿌리기술 전문기업 지정
-                                </li>
-                                <li>
-                                    <p class="month">2014</p>
-                                    베트남 현지 법인 설립<br>
-                                    5백만불 수출탑 수상<br>
-                                    표준협회 최고 경영자상 수상<br>
-                                    <img src="/images/history_2014.jpg" alt="2014연혁 이미지"><br>
-                                    <span>NR G&C 베트남 현지 법인</span>
-                                </li>
-                                <li>
-                                    <p class="month">2013</p>
-                                    제 3기술연구소 증축<br>
-                                    온실가스 인증제 획득
-                                </li>
-                                <li>
-                                    <p class="month">2012</p>
-                                    LG이노텍 혁신상 수상
-                                </li>
-                                <li>
-                                    <p class="month">2011</p>
-                                    제 2기술연구소 증축<br>
-                                    300만불 수출탑 수상<br>
-                                    에칭액 관련 특허출원
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- // section-history -->
-
-            <div id="year2001" class="container section-history js-inview-container" data-group-idx="1"><!-- section-history -->
-                <div class="wrap">
-                    <div class="summary">
-                        <div class="pic">
-                            <img src="/images/history_header_2010.jpg" alt="" />
-                        </div>
-                        <p class="desc">
-                            2010 - 2001
-                        </p>
-                    </div>
-                    <div class="pos-relative">
-                        <div class="year">
-                            <div class="module">
-                                <p class="start">2010</p>
-                                <p class="end">2001</p>
+        
+                        <div class="container section-lab-info-a">
+                            <div class="wrap is-full">
+                                <div class="pic pos-relative">
+                                    <img src="/images/laboratory_about_bg.jpg" alt="" class="cover-hidden">
+                                    <div class="pos-absolute cover" style="background-image: url('/images/laboratory_about_bg.jpg');"></div>
+                                    <div class="pos-absolute desc">
+                                        <p class="title">
+                                            연구개발에 대한 끊임없는 열정으로<br />
+                                            보다 안전하고 효과적인 치료제 개발을 위해 노력하고 있습니다
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="lists">
-                            <ul class="reset">
-                                <li>
-                                    <p class="month">2010</p>
-                                    NR G&C 2공장 및 기술연구소 증축<br>
-                                    NR G&C 물류 센터 운영<br>
-                                    Amine 계 D/F 박리액 Series 개발<br>
-                                    PSR 전용 장비 세정액<br>
-                                    <img src="/images/history_2010.jpg" alt="2010연혁 이미지"><br>
-                                    <span>NR G&C 수원 기술연구소</span>
-                                </li>
-                                <li>
-                                    <p class="month">2009</p>
-                                    제 2차 국세청 모범 납세자 표창장 수상
-                                </li>
-                                <li>
-                                    <p class="month">2008</p>
-                                    중소기업청 기술혁신 INNO BIZ 등록
-                                </li>
-                                <li>
-                                    <p class="month">2007</p>
-                                    SAP Etchant Series 개발<br>
-                                    KPCA 출품 전시<br>
-                                    소포제 Btix-100 개발
-                                </li>
-                                <li>
-                                    <p class="month">2006</p>
-                                    Soft Etching MET Series 개발
-                                </li>
-                                <li>
-                                    <p class="month">2005</p>
-                                    중국 법인 설립(중국 강소성 소주시)<br>
-                                    Half Etching Series 개발<br>
-                                    ISO14001 환경 인증 획득<br>
-                                    <img src="/images/history_2005.jpg" alt="2005연혁 이미지"><br>
-                                    <span>NR G&C 중국법인</span>
-                                </li>
-                                <li>
-                                    <p class="month">2004</p>
-                                    대덕전자 필리핀(DDPI) 수출 개시<br>
-                                    LG전자 우수 협력 업체상 수상<br>
-                                    기술연구소 설립
-                                </li>
-                                <li>
-                                    <p class="month">2003</p>
-                                    ISO 9001 인증 획득<br>
-                                    국세청 모범 납세자 표창장 수상<br>
-                                    KPCA 출품 전시<br>
-                                    박리 첨가제 개발
-                                </li>
-                                <li>
-                                    <p class="month">2002</p>
-                                    IBK기업은행 Family 기업 지정<br>
-                                    D/F 전용 박리액 Series 개발<br>
-                                    D/F 전용 장비 세정제 개발<br>
-                                    Soft Etchant SE Series 개발
-                                </li>
-                                <li>
-                                    <p class="month">2001</p>
-                                    일산에서 수원으로 사업장 확장 이전
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- // section-history -->
-
-            <div id="year1997" class="container section-history js-inview-container" data-group-idx="2"><!-- section-history -->
-                <div class="wrap">
-                    <div class="summary">
-                        <div class="pic">
-                            <img src="/images/history_header_2000.jpg" alt="" />
-                        </div>
-                        <p class="desc">
-                            2000 - 1997
-                        </p>
-                    </div>
-                    <div class="pos-relative">
-                        <div class="year">
-                            <div class="module">
-                                <p class="start">2000</p>
-                                <p class="end">1997</p>
+        
+                        <div class="container section-lab-info section-lab-info-b overflow-visible"><!-- section-lab-info -->
+                            <div class="wrap is-full">
+        
+                                <div id="scrollReveal" class="upper">
+                                    <div class="sizer"></div>
+                                    <div class="grid wrapper">
+                                        <div class="pos-relative">
+                                            <div class="motif-lines-holder">
+                                                <div class="motif-lines">
+                                                    <div class="holder">
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col col-a pic pos-relative">
+                                            <img src="/images/laboratory_about_img01.jpg" alt="" class="cover-hidden">
+                                            <div class="pos-absolute cover cover-0" style="background-image: url('/images/laboratory_about_img01.jpg');"></div>
+                                            <div class="pos-absolute cover cover-1" style="background-image: url('/images/laboratory_about_img02.jpg');"></div>
+                                        </div>
+                                        <div class="col col-b desc">
+                                            <div class="module">
+                                                <p class="title">
+                                                    혁신적인 글로벌<br />
+                                                    신약개발
+                                                </p>
+                                                <p class="bold">
+                                                    성남시 판교에 위치하고 있는 삼진제약<br />
+                                                    중앙연구소는
+                                                </p>
+                                                <p class="description">
+                                                    꺼지지 않는 열정과 끊임없는 노력으로 혁신적인 글로벌 신약 및 개량신약 개발을 위해 최선을 다하고 있습니다.<br>
+                                                    다가오는 고령화 사회를 위협하는 암, 황반변성 및 치매 등 노인성 질환과 난치성 섬유화 질환 등 근원 치료가 어려운 미충족 의료수요 (unmet medical needs) 분야의 다양한 질병을 극복하기 위한 연구개발을 이어가고 있습니다.<br>
+                                                    이를 위하여 우수한 연구원 영입과 외부연구기관과의 공동연구를 통한 신물질의 탐색, 합성, 효능 평가, 약리 및 독성 평가, 제제 연구에 이르기까지 의약품 개발의 전 과정을 수행하고 있으며 삼진제약이 글로벌 기업으로 도약하기 위한 미래를 준비하고 있습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
                             </div>
-                        </div>
-                        <div class="lists">
-                            <ul class="reset">
-                                <li>
-                                    <p class="month">1997</p>
-                                    회사 창립(무역업)<br>
-                                    <img src="/images/history_1997.jpg" alt="1997연혁 이미지"><br>
-                                    <span>NR G&C 시화본사</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- // section-history -->
-
-        </div>
-
-        <div class="bottom-spacer" aria-hidden="true"></div>
-    
+                        </div><!-- // section-lab-info -->
+        
+                    </div><!-- // content -->
+                    <!-- //content -->
+        
+        
+                </div><!-- // inner -->
+        
+            </div><!-- // wrapper -->
+        
+        </div><!-- // container -->
     </body>
     
     <script>
-    $(function() {
-		
-        var myApp = new BaseInView('.js-inview-container', {
-            countUpRestart: true, // 카운트업 재시작
-            onResize: function(base) {
-                // console.log(base.scope);
-            },
-            onScroll: function(base) {
-                // console.log(base);
-            }
-        });
-    
-    
-    });
     </script>
 </html>
